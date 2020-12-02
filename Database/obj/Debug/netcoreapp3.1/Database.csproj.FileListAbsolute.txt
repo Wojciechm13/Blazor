@@ -1,0 +1,12 @@
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.csprojAssemblyReference.cache
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.AssemblyInfoInputs.cache
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.AssemblyInfo.cs
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.csproj.CoreCompileInputs.cache
+/Users/wojtek/RiderProjects/Blazor/Database/bin/Debug/netcoreapp3.1/Database.deps.json
+/Users/wojtek/RiderProjects/Blazor/Database/bin/Debug/netcoreapp3.1/Database.runtimeconfig.json
+/Users/wojtek/RiderProjects/Blazor/Database/bin/Debug/netcoreapp3.1/Database.runtimeconfig.dev.json
+/Users/wojtek/RiderProjects/Blazor/Database/bin/Debug/netcoreapp3.1/Database.dll
+/Users/wojtek/RiderProjects/Blazor/Database/bin/Debug/netcoreapp3.1/Database.pdb
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.dll
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.pdb
+/Users/wojtek/RiderProjects/Blazor/Database/obj/Debug/netcoreapp3.1/Database.genruntimeconfig.cache

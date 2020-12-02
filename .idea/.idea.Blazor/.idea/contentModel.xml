@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_Blazor.-1584314569.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="API" t="IncludeRecursive">
+        <e p="adults.json" t="Include" />
+        <e p="API.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="PersonsController.cs" t="Include" />
+          <e p="UsersController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="AddPersonService.cs" t="Include" />
+          <e p="DBSeeder.cs" t="Include" />
+          <e p="IAddPersonService.cs" t="Include" />
+          <e p="InMemoryUserService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+          <e p="SqlGetPersons.cs" t="Include" />
+        </e>
+        <e p="DataAccess" t="Include">
+          <e p="PersonDBContext.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20201202084022_InitialCreate.cs" t="Include" />
+          <e p="20201202084022_InitialCreate.Designer.cs" t="Include" />
+          <e p="PersonDBContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Adult.cs" t="Include" />
+          <e p="Person.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="API.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="persons.db" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include" />
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="Blazor" t="IncludeRecursive">
+        <e p="_Imports.razor" t="Include" />
+        <e p="App.razor" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Authentication" t="Include">
+          <e p="CustomAuthenticationStateProvider.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Blazor.csproj" t="IncludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="AddPersonService.cs" t="Include" />
+          <e p="IAddPersonService.cs" t="Include" />
+          <e p="InMemoryUserService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Adult.cs" t="Include" />
+          <e p="Person.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Blazor.AssemblyInfo.cs" t="Include" />
+              <e p="Blazor.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pages" t="Include">
+          <e p="_Host.cshtml" t="Include" />
+          <e p="AddPerson.razor" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Index.razor" t="Include" />
+          <e p="Login.razor" t="Include" />
+          <e p="SecurityLevel.razor" t="Include" />
+          <e p="ViewPeople.razor" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="MainLayout.razor" t="Include" />
+          <e p="NavMenu.razor" t="Include" />
+          <e p="SurveyPrompt.razor" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="bootstrap.min.css" t="Include" />
+              <e p="bootstrap.min.css.map" t="Include" />
+            </e>
+            <e p="open-iconic" t="Include">
+              <e p="font" t="Include">
+                <e p="css" t="Include">
+                  <e p="open-iconic-bootstrap.min.css" t="Include" />
+                </e>
+                <e p="fonts" t="Include">
+                  <e p="open-iconic.eot" t="Include" />
+                  <e p="open-iconic.otf" t="Include" />
+                  <e p="open-iconic.svg" t="Include" />
+                  <e p="open-iconic.ttf" t="Include" />
+                  <e p="open-iconic.woff" t="Include" />
+                </e>
+              </e>
+              <e p="FONT-LICENSE" t="Include" />
+              <e p="ICON-LICENSE" t="Include" />
+              <e p="README.md" t="Include" />
+            </e>
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+        </e>
+      </e>
+      <e p="Blazor.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

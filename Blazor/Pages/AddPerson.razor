@@ -1,0 +1,61 @@
+@page "/addPerson"
+@using Assignment1.Data
+@using Models
+@inject IAddPersonService AddPersonService
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView>
+    <h3>Hello @context.User.Identity.Name here you can add new person to the database</h3>
+</AuthorizeView>
+
+<EditForm Model="@newPersonElement" OnValidSubmit="@AddNewPerson">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    <div class="form-group">
+        First name:<br/>
+        <InputText @bind-Value="newPersonElement.FirstName"/>
+    </div>
+    <div class="form-group">
+        Last name:<br/>
+        <InputText @bind-Value="newPersonElement.LastName"/>
+    </div>
+    <div class="form-group">
+        Hair color:<br/>
+        <InputText @bind-Value="newPersonElement.HairColor"/>
+    </div>
+    <div class="form-group">
+        Eye color:<br/>
+        <InputText @bind-Value="newPersonElement.EyeColor"/>
+    </div>
+    <div class="form-group">
+        Age:<br/>
+        <InputNumber @bind-Value="newPersonElement.Age"/>
+    </div>
+    <div class="form-group">
+        Weight:<br/>
+        <InputNumber @bind-Value="newPersonElement.Weight"/>
+    </div>
+    <div class="form-group">
+        Height:<br/>
+        <InputNumber @bind-Value="newPersonElement.Height"/>
+    </div>
+    <div class="form-group">
+        Sex:<br/>
+        <InputText @bind-Value="newPersonElement.Sex"/>
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+    </p>
+</EditForm>
+
+@code {
+    private Person newPersonElement = new Person();
+
+    private async Task AddNewPerson()
+    {
+        await AddPersonService.AddPersonAsync(newPersonElement);
+        NavigationManager.NavigateTo("/viewPeople");
+    }
+}
