@@ -12,8 +12,6 @@ namespace Assignment1.Data
     {
         public static void Seed(IList<Person> persons)
         {
-            // CleanInterestObjects(families);
-
             Console.WriteLine("Add persons..");
             AddPersons(persons);
             Console.WriteLine("Done!");
@@ -21,8 +19,6 @@ namespace Assignment1.Data
 
         public static void SeedUsers(IList<User> users)
         {
-            // CleanInterestObjects(families);
-
             Console.WriteLine("Add users..");
             AddUsers(users);
             Console.WriteLine("Done!");
@@ -38,7 +34,6 @@ namespace Assignment1.Data
                     Console.WriteLine(person.ToString());
                     fctxt.Persons.AddAsync(person);
                     fctxt.Entry(person).State = EntityState.Added;
-                    //fctxt.Entry(adult).State = EntityState.Detached;
                     fctxt.SaveChangesAsync();
                 }
             }
@@ -53,7 +48,6 @@ namespace Assignment1.Data
                     Console.WriteLine(user.ToString());
                     fctxt.Users.AddAsync(user);
                     fctxt.Entry(user).State = EntityState.Added;
-                    //fctxt.Entry(user).State = EntityState.Detached;
                     fctxt.SaveChangesAsync();
                 }
             }

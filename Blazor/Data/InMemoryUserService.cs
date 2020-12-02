@@ -17,7 +17,7 @@ namespace Assignment1.Data
         public async Task<User> ValidateUser(string userName, string password)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync($"https://localhost:5003/Users?username={userName}&password={password}");
+            HttpResponseMessage response = await client.GetAsync($"https://localhost:5000/Users?username={userName}&password={password}");
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string userAsJson = await response.Content.ReadAsStringAsync();

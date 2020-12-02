@@ -17,16 +17,7 @@ namespace Assignment2API.Controllers
             this.userService = userService;
         }
 
-        /*[HttpGet]
-        public async Task<ActionResult<IList<User>>> GetUsers() {
-            try {
-                IList<User> users = await userService.allUsersAsync();
-                return Ok(users);
-            } catch (Exception e) {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
-        }*/
+        
 
         [HttpGet]
         public async Task<ActionResult<User>> ValidateUser([FromQuery] string username, [FromQuery] string password)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,44 +15,58 @@ namespace Assignment1.Data
 {
     public class AddPersonService : IAddPersonService
     {
-        private string uri = "http://localhost:5002";
-        private readonly HttpClient client;
+        private string peopleFile = "adults.json";
+        private IList<Person> persons;
 
         public AddPersonService()
         {
-            client = new HttpClient();
+            if (!File.Exists(peopleFile))
+            {
+                //Seed();
+                WritePeopleToFile();
+            }
+            else
+            {
+                string content = File.ReadAllText(peopleFile);
+                persons = JsonSerializer.Deserialize<List<Person>>(content);
+            }
         }
             
-        
             
-        public async Task<List<Person>> GetPersonsAsync()
+            
+        public async Task<IList<Person>> GetPersonsAsync()
         {
-            Task<string> stringAsync = client.GetStringAsync(uri+"/Persons");
-            string message = await stringAsync;
-            List<Person> result = JsonSerializer.Deserialize<List<Person>>(message);
-            return result;
+            List<Person> tmp = new List<Person>(persons);
+            return tmp;
         }
 
         public async Task AddPersonAsync(Person person)
         {
-            string todoAsJson = JsonSerializer.Serialize(person);
-            HttpContent content = new StringContent(todoAsJson,
-                Encoding.UTF8,
-                "application/json");
-            await client.PostAsync(uri+"/Persons", content);
+            int max = persons.Max(person => person.Id);
+            person.Id = (++max);
+            persons.Add(person);
+            WritePeopleToFile();
         }
 
         public async Task RemovePersonAsync(int personId)
         {
-            await client.DeleteAsync($"{uri}/Persons/{personId}");
+            Person toRemove = persons.First(t => t.Id == personId);
+            persons.Remove(toRemove);
+            WritePeopleToFile();
         }
 
-        public async Task UpdatePersonAsync(Person person) {
-            string todoAsJson = JsonSerializer.Serialize(person);
-            HttpContent content = new StringContent(todoAsJson,
-                Encoding.UTF8,
-                "application/json");
-            await client.PatchAsync($"{uri}/Persons/{person.Id}", content);
+        public async Task UpdatePersonAsync(Person person)
+        {
+            await RemovePersonAsync(person.Id);
+            await AddPersonAsync(person);
+            WritePeopleToFile();
+        }
+        
+        
+        private void WritePeopleToFile()
+        {
+            string productAsJson = JsonSerializer.Serialize(persons);
+            File.WriteAllText(peopleFile, productAsJson);
         }
     }
 }

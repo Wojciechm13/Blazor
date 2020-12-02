@@ -6,7 +6,7 @@ namespace Assignment1.Data
 {
     public interface IAddPersonService
     {
-        Task<List<Person>> GetPersonsAsync();
+        Task<IList<Person>> GetPersonsAsync();
         Task AddPersonAsync(Person person);
         Task RemovePersonAsync(int personId);
         Task UpdatePersonAsync(Person person);

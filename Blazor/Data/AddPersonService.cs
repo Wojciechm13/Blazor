@@ -14,7 +14,7 @@ namespace Assignment1.Data
 {
     public class AddPersonService : IAddPersonService
     {
-        private string uri = "http://localhost:5002";
+        private string uri = "http://localhost:5000";
         private readonly HttpClient client;
 
         public AddPersonService()

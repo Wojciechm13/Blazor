@@ -18,7 +18,7 @@ namespace Assignment1.Data
             this.ctx = ctx;
         }
 
-        public async Task<List<Person>> GetPersonsAsync()
+        public async Task<IList<Person>> GetPersonsAsync()
         {
             return await ctx.Persons.ToListAsync();
         }
