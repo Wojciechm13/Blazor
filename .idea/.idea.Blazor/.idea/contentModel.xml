@@ -45,6 +45,8 @@
           </e>
         </e>
         <e p="persons.db" t="Include" />
+        <e p="persons.db-shm" t="Include" />
+        <e p="persons.db-wal" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include" />
         <e p="Startup.cs" t="Include" />
